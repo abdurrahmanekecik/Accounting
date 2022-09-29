@@ -1,4 +1,5 @@
 <?php include 'header.php'; ?>
+
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -17,10 +18,13 @@
         </div>
       </div><!-- /.container-fluid -->
     </section>
+
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-        <div class="row">  	
+        <div class="row">
+
+        	
           <!-- left column -->
           <div class="col-md-12">
             <!-- general form elements -->
@@ -32,6 +36,7 @@
               <!-- form start -->
               <form action="../backend/functions.php" method="post">
                 <div class="card-body">
+                  
                 	<div class="form-group">
                     <label for="exampleInputPassword1">Customer Name</label>
                     <input type="text" class="form-control" name="customer_name" >
@@ -41,16 +46,20 @@
                     <label for="exampleInputPassword1">Customer Balance</label>
                     <input type="text" class="form-control" name="customer_balance" >
                   </div>
-                 <div class="form-group">
+
+                   <div class="form-group">
                     <label for="exampleInputPassword1">Customer Despriction</label>
                     <input type="text" name="customer_despriction" class="form-control"  >
                   </div>
+
+
                   <div class="form-group">
                   <label>Customer Date</label>
                     <div class="input-group date">
-                        <input name="customer_date"  type="date" class="form-control" />                        
+                        <input name="customer_date"  type="date" class="form-control" />
+                        
                     </div>
-                   </div>             
+                   </div>                  
                 </div>
                 <!-- /.card-body -->
 
@@ -58,7 +67,8 @@
                   <button type="submit" name="customer_add" class="btn btn-primary">Submit</button>
                 </div>
               </form>
-            </div>           
+            </div>
+            <!-- /.card -->                   
         </div>
         <!-- /.row -->
       </div><!-- /.container-fluid -->
@@ -66,6 +76,4 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-  
-
   <?php include 'footer.php'; ?>

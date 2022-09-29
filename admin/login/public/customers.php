@@ -1,4 +1,5 @@
 <?php include'header.php'; ?>
+
  <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -16,6 +17,7 @@
         </div>
       </div><!-- /.container-fluid -->
     </section>
+
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
@@ -38,8 +40,10 @@
                     <th>Balance</th>
                   </tr>
                   </thead>
-                  <tbody>
+                  <tbody>     
+
               <?php foreach ($customer_take_list as $customer_detail_take) { ?>
+
                   <tr>
                     <td><?php echo $customer_detail_take['customer_id']; ?></td>
                     <td><?php echo  $customer_detail_take['customer_name']; ?></td>
@@ -47,14 +51,16 @@
                     <td><?php echo  $customer_detail_take['customer_balance']; ?>TL</td>
                     <td><a href="customer-detail.php?customer_id=<?php echo $customer_detail_take['customer_id']?>"><button class="btn btn-primary" >Edit</button></a></td>
                     <td><a href="../backend/functions.php?customer_id=<?php echo $customer_detail_take['customer_id']?>&customer_delete=ok"><button class="btn btn-danger">Delete</button></a></td>
+                  
                   </tr>
-              <?php  } ?>
+                  <?php } ?>
                   </tbody>
+                
                 </table>
               </div>
               <!-- /.card-body -->
             </div>
-            <!-- /.card -->
+            <!-- /.card -->  
             <!-- /.card -->
           </div>
           <!-- /.col -->
@@ -65,35 +71,5 @@
     </section>
     <!-- /.content -->
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  
 <?php include'footer.php'; ?>

@@ -1,5 +1,6 @@
 <?php 
-
+ 
+    
 try{
 
      $db = new PDO("mysql:host=localhost; dbname=accounting; charset=utf8", 'root', '');
@@ -10,5 +11,7 @@ try{
 {
  echo $e->getMessage();
 }
+
+
 
 ?>

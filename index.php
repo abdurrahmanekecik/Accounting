@@ -79,8 +79,8 @@ video {
 </div>
 
 <div class="content">
-  <h1>Accounting OOP Php</h1>
-  <p>Accounting Proejct OOP Php Version</p>
+  <h1>Accounting Pure Php</h1>
+  <p>Accounting Proejct Pure Php Version</p>
  <a href="admin/login.php" > <button id="myBtn" >View Project</button></a>
 </div>
 

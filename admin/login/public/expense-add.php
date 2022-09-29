@@ -1,4 +1,5 @@
 <?php include 'header.php'; ?>
+
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -17,6 +18,7 @@
         </div>
       </div><!-- /.container-fluid -->
     </section>
+
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
@@ -33,33 +35,46 @@
               <form action="../backend/functions.php" method="post">
                 <div class="card-body">
                   <div class="form-group">
+
               <select id="heard" class="form-control" name="customer_id" required>
-            <?php foreach ($customer_take as $customer_end) {  ?>
-                  <option value="<?php echo $customer_end['customer_id']; ?>" ><?php echo $customer_end['customer_name']; ?></option>
+                    <?php 
+                                
+          
+                                                      
+        foreach ($customer_take_list as $customer_take) {  ?>
+                  <option value="<?php echo $customer_take['customer_id']; ?>" ><?php echo $customer_take['customer_name']; ?></option>
+                  
+
                   <?php } ?>
               </select>
+
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Expense Amount</label>
                     <input type="text" class="form-control" name="expense_amount" >
                   </div>
-                 <div class="form-group">
+
+                   <div class="form-group">
                     <label for="exampleInputPassword1">Expense Despriction</label>
                     <input type="text" name="expense_despriction" class="form-control"  >
                   </div>
+
                   <div class="form-group">
                   <label>Expense Date</label>
                     <div class="input-group date">
-                        <input name="expense_date"  type="date" class="form-control" />    
+                        <input name="expense_date"  type="date" class="form-control" />
+                        
                     </div>
                    </div>
+
                    <div class="form-group">
                     <label for="exampleInputPassword1">Expense Situation</label>
                    <select id="heard" class="form-control" name="expense_situation" required>
-                  <option value="1" >Aktif</option>
-                  <option value="0" >Pasif</option>
+                  <option value="1" >Active</option>
+                  <option value="0" >Passive</option>
               </select>
                </div>
+             
                 </div>
                 <!-- /.card-body -->
 
@@ -68,6 +83,8 @@
                 </div>
               </form>
             </div>
+            <!-- /.card -->          
+         
         </div>
         <!-- /.row -->
       </div><!-- /.container-fluid -->

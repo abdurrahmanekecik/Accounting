@@ -1,4 +1,8 @@
 <?php include'header.php'; ?>
+
+
+
+
  <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -16,13 +20,21 @@
         </div>
       </div><!-- /.container-fluid -->
     </section>
+
+
+
     <!-- Main content -->
     <section class="content">
+
       <div class="container-fluid">
+
         <div class="row">
+
           <div class="col-12"><br>
             <a href="expense-add.php"><button class="btn btn-primary "> Expense Add</button> </a><br><br>
+
             <div class="card">
+
               <div class="card-header">
                 <h3 class="card-title">Expenses Are Also Listed Below</h3>
               </div>
@@ -38,41 +50,50 @@
                     <th>Date</th>
                     <th>Customer Balance</th>
                     <th>Situation</th>
-                    <th>Edit</th>
+                     <th>Edit</th>
                     <th>Delete</th>
+                   
                   </tr>
                   </thead>
                   <tbody>
 
-              <?php foreach ($expense_take as $expenses_detail_take) {
-                                
+
+              <?php foreach ($expenses_take as $expenses_detail_take) {
+                     
             $customer_setting = $db->prepare("SELECT * FROM customers WHERE customer_id=:customer_id");
-            $customer_setting->execute(['customer_id'=> $expenses_detail_take['customer_id']]);
+            $customer_setting->execute([  
+
+            'customer_id'=> $expenses_detail_take['customer_id']]);
             $customer_take = $customer_setting->fetchAll(PDO::FETCH_ASSOC);
-             foreach ($customer_take as $customer_end) { ?>
+                                                      
+				      foreach ($customer_take as $customer_end) { ?>
                   <tr>
                     <td><?php echo $expenses_detail_take['expense_id']; ?></td>
                     <td><?php echo  $customer_end['customer_name']; ?></td>
-                    <td><?php echo  $expenses_detail_take['expense_amount']; ?>TL</td>
+                     <td><?php echo  $expenses_detail_take['expense_amount']; ?>TL</td>
                     <td><?php echo  $expenses_detail_take['expense_despriction']; ?></td>
-                    <td><?php echo $expenses_detail_take['expense_date']; ?></td>
-                    <td><?php echo $customer_end['customer_balance']; ?></td>
-                    <td><?php if ($expenses_detail_take['expense_situation']==1) {?>    
-                    <button class="btn-success btn">Aktif </button></td>
-                    <?php }  else { ?> 
-        	          <button class="btn btn-warning">Pasif </button>  <?php  } ?>
+                     <td><?php echo $expenses_detail_take['expense_date']; ?></td>
+                     <td><?php echo $customer_end['customer_balance']; ?></td>
+
+                     <td> <?php if ($expenses_detail_take['expense_situation']==1) {?>    
+                                <button class="btn-success btn">Active </button></td>
+
+        <?php }  else { ?> 
+
+        	   <button class="btn btn-warning">Passive </button>  <?php  } ?>
+
                     <td><a href="expense-detail.php?expense_id=<?php echo $expenses_detail_take['expense_id']?>"><button class="btn btn-primary" >Edit</button></a></td>
-                     <td><a href="../backend/functions.php?expense_id=<?php echo $expenses_detail_take['expense_id']?>&expense_delete=ok"><button class="btn btn-danger">Delete</button></a></td>
+                     <td><a href="../backend/functions.php?expenses_id=<?php echo $expenses_detail_take['expense_id']?>&expenses_delete=ok"><button class="btn btn-danger">Delete</button></a></td>
+                  
                   </tr>
-
-                <?php    } } ?>
-
+<?php    } } ?>
                   </tbody>
+                
                 </table>
               </div>
               <!-- /.card-body -->
             </div>
-            <!-- /.card --> 
+            <!-- /.card -->  
             <!-- /.card -->
           </div>
           <!-- /.col -->
@@ -83,5 +104,23 @@
     </section>
     <!-- /.content -->
   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <?php include'footer.php'; ?>

@@ -1,7 +1,12 @@
 <?php include 'header.php'; 
 
+
+//customer detail list
 $customer_detail_setting = $db-> prepare("SELECT * FROM customers where customer_id=:id");
-$customer_detail_setting -> execute(['id'=> $_GET['customer_id']]);
+$customer_detail_setting -> execute([ 
+
+    'id'=> $_GET['customer_id']]);
+
 $customer_detail_take = $customer_detail_setting ->fetch(PDO::FETCH_ASSOC);
 
 ?>
@@ -24,6 +29,7 @@ $customer_detail_take = $customer_detail_setting ->fetch(PDO::FETCH_ASSOC);
         </div>
       </div><!-- /.container-fluid -->
     </section>
+
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
@@ -39,25 +45,31 @@ $customer_detail_take = $customer_detail_setting ->fetch(PDO::FETCH_ASSOC);
               <!-- form start -->
               <form action="../backend/functions.php" method="post">
                 <div class="card-body">
-                <div class="form-group">
+                 <div class="form-group">
                     <label for="exampleInputPassword1">Customer Name</label>
                     <input type="text" name="customer_name" class="form-control" value="<?php echo $customer_detail_take['customer_name'];?>" >
                   </div>
+
                   <div class="form-group">
                     <label for="exampleInputPassword1">Customer Amount</label>
                     <input type="text" class="form-control" name="customer_balance" value="<?php echo $customer_detail_take['customer_balance'] ?>" >
                   </div>
-                   <div class="form-group">
+
+                  <div class="form-group">
                     <label for="exampleInputPassword1">Customer Despriction</label>
                     <input type="text" name="customer_despriction" class="form-control" value="<?php echo $customer_detail_take['customer_despriction'];?>" placeholder="customer_id">
                   </div>
-                  <div class="form-group">
+
+                    <div class="form-group">
                   <label>Customer Date</label>
                     <div class="input-group date">
-                        <input name="customer_date" value="<?php echo $customer_detail_take['customer_date'];?>" type="date" class="form-control" />                        
+                        <input name="customer_date" value="<?php echo $customer_detail_take['customer_date'];?>" type="date" class="form-control" />
+                        
                     </div>
                    </div>
-                  <input type="hidden" name="customer_id" value="<?php echo $customer_detail_take['customer_id']; ?>">           
+
+                  <input type="hidden" name="customer_id" value="<?php echo $customer_detail_take['customer_id']; ?>"> 
+              
                 </div>
                 <!-- /.card-body -->
 
@@ -66,7 +78,7 @@ $customer_detail_take = $customer_detail_setting ->fetch(PDO::FETCH_ASSOC);
                 </div>
               </form>
             </div>
-            <!-- /.card -->          
+            <!-- /.card -->         
         </div>
         <!-- /.row -->
       </div><!-- /.container-fluid -->

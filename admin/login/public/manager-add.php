@@ -18,11 +18,13 @@
         </div>
       </div><!-- /.container-fluid -->
     </section>
+
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
         <div class="row">
-          <!-- left column -->
+
+      <!-- left column -->
           <div class="col-md-12">
             <!-- general form elements -->
             <div class="card card-primary">
@@ -46,6 +48,7 @@
                     <label for="exampleInputPassword1">manager Password</label>
                     <input type="password" class="form-control" name="manager_password" >
                   </div>
+
                     <input type="hidden" value="3" class="form-control" name="manager_authority" >
                     <input type="hidden" value="<?php echo date("m.d.y"); ?>" class="form-control" name="manager_last_login" >
                   <div class="form-group">
@@ -55,6 +58,7 @@
                         
                     </div>
                    </div>
+                 
                 </div>
                 <!-- /.card-body -->
 
@@ -62,8 +66,7 @@
                   <button type="submit" name="manager_add" class="btn btn-primary">Submit</button>
                 </div>
               </form>
-            </div>
-            <!-- /.card -->
+            </div>  
         </div>
         <!-- /.row -->
       </div><!-- /.container-fluid -->

@@ -1,4 +1,4 @@
-<?php include'header.php';?>
+<?php include'header.php'; ?>
  <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -16,13 +16,18 @@
         </div>
       </div><!-- /.container-fluid -->
     </section>
-    <!-- Main content -->
+
     <section class="content">
+
       <div class="container-fluid">
+
         <div class="row">
+
           <div class="col-12"><br>
             <a href="manager-add.php"><button class="btn btn-primary ">Manager Add</button> </a><br><br>
+
             <div class="card">
+
               <div class="card-header">
                 <h3 class="card-title">Managers Are Also Listed Below</h3>
               </div>
@@ -39,22 +44,29 @@
                   </tr>
                   </thead>
                   <tbody>
-                <?php foreach ($managers_take as $managers_detail_take) { ?>
+
+
+                 
+
+              <?php foreach ($managers_take as $managers_detail_take) { ?>
                   <tr>
-                  <td><?php echo $managers_detail_take['manager_id']; ?></td>
-                  <td><?php echo  $managers_detail_take['manager_name']; ?></td>
-                  <td><?php echo  $managers_detail_take['manager_surname']; ?></td>
-                  <td><?php echo $managers_detail_take['manager_last_login']; ?></td>
-                  <td><?php echo $managers_detail_take['manager_time']; ?></td>
+                    <td><?php echo $managers_detail_take['manager_id']; ?></td>
+                     <td><?php echo  $managers_detail_take['manager_name']; ?></td>
+                    <td><?php echo  $managers_detail_take['manager_surname']; ?></td>
+                     <td><?php echo $managers_detail_take['manager_last_login']; ?></td>
+                     <td><?php echo $managers_detail_take['manager_time']; ?></td>
                   </tr>
-                <?php    }  ?>
-                  </tbody>               
+
+                <?php }  ?>
+
+                  </tbody>
+                
                 </table>
               </div>
               <!-- /.card-body -->
             </div>
+            <!-- /.card --> 
             <!-- /.card -->
-          <!-- /.card -->
           </div>
           <!-- /.col -->
         </div>
@@ -64,23 +76,5 @@
     </section>
     <!-- /.content -->
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <?php include'footer.php'; ?>

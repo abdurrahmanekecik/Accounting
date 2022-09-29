@@ -1,5 +1,4 @@
 <?php include 'header.php'; ?>
-
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -35,68 +34,21 @@
               <form action="../backend/functions.php" method="post">
                 <div class="card-body">
                   <div class="form-group">
-
-
-
-                    
-
-
-
-
-
-
-     
-
-
-
               <select id="heard" class="form-control" name="customer_id" required>
-                    <?php 
+                    <?php foreach ($customer_take_list as $customer_end) {  ?>
 
-                  
-
-
-                                
-            $customer_setting = $db->prepare("SELECT * FROM customers");
-            $customer_setting->execute();
-            $customer_take = $customer_setting;
-                                                      
-        foreach ($customer_take as $customer_end) {  ?>
-                  <option value="<?php echo $customer_end['customer_id']; ?>" ><?php echo $customer_end['customer_name']; ?></option>
-                  
-
+        <option value="<?php echo $customer_end['customer_id']; ?>" ><?php echo $customer_end['customer_name']; ?></option>
                   <?php } ?>
               </select>
-
-
-
-
-
-
-
-
-
-
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Revenues Amount</label>
                     <input type="text" class="form-control" name="revenues_amount" >
                   </div>
-
-
-
-
                    <div class="form-group">
                     <label for="exampleInputPassword1">Revenues Despriction</label>
                     <input type="text" name="revenues_despriction" class="form-control"  >
                   </div>
-
-
-                
-
-
-
-
-
                   <div class="form-group">
                   <label>Revenues Date</label>
                     <div class="input-group date">
@@ -104,30 +56,13 @@
                         
                     </div>
                    </div>
-
-
                    <div class="form-group">
                     <label for="exampleInputPassword1">Revenues Situation</label>
                    <select id="heard" class="form-control" name="revenues_situation" required>
                   <option value="1" >Active</option>
                   <option value="0" >Passive</option>
               </select>
-               </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                 
+               </div>                
                 </div>
                 <!-- /.card-body -->
 
@@ -135,11 +70,7 @@
                   <button type="submit" name="revenues_add" class="btn btn-primary">Submit</button>
                 </div>
               </form>
-            </div>
-            <!-- /.card -->
-
-          
-         
+            </div>      
         </div>
         <!-- /.row -->
       </div><!-- /.container-fluid -->

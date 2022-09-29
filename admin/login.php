@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Accounting OOP | Log in</title>
+  <title>Accounting | Log in</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -23,8 +23,7 @@
   <div class="card">
     <div class="card-body login-card-body">
       <p class="login-box-msg">Login</p>
-
-      <form action="login/backend/functions.php" method="post">
+     <form action="login/backend/functions.php" method="post">
         <div class="input-group mb-3">
           <input type="text" name="manager_name" class="form-control" placeholder="Email">
           <div class="input-group-append">
@@ -41,7 +40,7 @@
             </div>
           </div>
         </div>
-        <div class="row"> 
+        <div class="row">
           <!-- /.col -->
           <div class="col-4">
             <button type="submit" name="manager_login" class="btn btn-primary btn-block">Login</button>

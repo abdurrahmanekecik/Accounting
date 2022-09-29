@@ -96,8 +96,8 @@ else {}
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
-                    <th>Month</th>
-                    <th>Profit Total</th>
+                  	<th>Month</th>
+                  	<th>Profit Total</th>
                   </tr>
                   </thead>
                   <tbody>               
@@ -128,8 +128,8 @@ else { }
 
 
 <div class="col-md-6">
-    <div class="form-group">
-      <form  method="post" action=""> 
+	  <div class="form-group">
+	  	<form  method="post" action=""> 
       <td><select class="select2" multiple="multiple" name="month_option" style="width: 100%;">
   <option value="01">January</option>
   <option value="02">February</option>
